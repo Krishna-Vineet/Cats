@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cats</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <img src="images/Cat-Background-of-Snuggling-Cats.jpg" alt="bg" class="bg">
+    <main>
+
+
+      <!-- page 1 -->
+        <div class="page page1">
+          <img src="images/pink.jpg" alt="pink cat">
+          <div class="text">
+            <h3>cat no. 1</h3>
+            <h1>Pink Cat</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum quia adipisci vel pariatur possimus porro minima nostrum dolore quos!</p>
+            <button onclick="ask(1)">Explore</button>
+          </div>
+        </div>
+
+
+        <!-- page 2 -->
+        <div class="page page2">
+          <img src="images/black.jpg" alt="black cat">
+          <div class="text">
+            <h3>cat no. 2</h3>
+            <h1>Black Cat</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum quia adipisci vel pariatur possimus porro minima nostrum dolore quos!</p>
+            <button onclick="ask(2)">Explore</button>
+          </div>
+        </div>
+
+
+        <!-- page 3 -->
+        <div class="page page3">
+          <img src="images/big.jpg" alt="big cat">
+          <div class="text">
+            <h3>cat no. 3</h3>
+            <h1>Big Cat</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum quia adipisci vel pariatur possimus porro minima nostrum dolore quos!</p>
+            <button onclick="ask(3)">Explore</button>
+          </div>
+        </div>
+
+
+        <!-- page 4 -->
+        <div class="page page4">
+          <img src="images/blur.jpg" alt="blur cat">
+          <div class="text">
+            <h3>cat no. 4</h3>
+            <h1>Blur Cat</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum quia adipisci vel pariatur possimus porro minima nostrum dolore quos!</p>
+            <button onclick="ask(4)">Explore</button>
+          </div>
+        </div>
+
+        
+      </main>
+
+
+        <!-- The Modal -->
+            <div id="myModal">
+              <div id="modalContent">
+                  <h2 id="modalText">Noty hora h ke BKL?</h2>
+                  <button id="yesButton" onclick="openLink()">Yes</button>
+                  <button id="noButton" onclick="closeModal()">No</button>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      var currentButtonId; // variable to store the clicked button ID
+
+function ask(buttonId) {
+    // Set the currentButtonId and display the custom modal
+    currentButtonId = buttonId;
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'grid';
+    modal.style.placeItems = 'center';
+}
+
+function openLink() {
+    // Define different links based on the clicked button
+    var link;
+    switch (currentButtonId) {
+        case 1:
+            link = 'https://xhamster.com/categories/russian';
+            break;
+        case 2:
+            link = 'https://xhamster.com/categories/indian';
+            break;
+        case 3:
+            link = 'https://xhamster.com/categories/thailand';
+            break;
+        case 4:
+            link = 'https://xhamster.com/categories/japanese';
+            break;
+        default:
+            link = '#'; // Default link if no match
+    }
+
+    // If 'Yes' is clicked, open the corresponding link
+    window.location.href = link;
+
+    // Close the modal
+    closeModal();
+}
+
+function closeModal() {
+    // Close the modal
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
+  </script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
