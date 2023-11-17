@@ -13,14 +13,14 @@ body{
   top: 0;
   left: 0;
 }
-.bg{
+/* .bg{
   position: fixed;
   filter: brightness(0.5) blur(3px);
-  size: contain;
+  size: cover;
   top: -60px;
   left: -60px;
   z-index: -1;
-}
+} */
 body::-webkit-scrollbar {
   width: 0.35em; /* Set a thin width for the scrollbar */
 }
